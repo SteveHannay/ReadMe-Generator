@@ -5,7 +5,8 @@ function generateMarkdown(data) {
 
   return `# TITLE
 
-[Visit GitHub!](www.github.com)
+[Sample Link](www.github.com)
+![Sample Image](https://octodex.github.com/images/bannekat.png).
 
 _This text is italicized_ 
 **This is bold text**
