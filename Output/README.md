@@ -1,6 +1,8 @@
 # TITLE
 
-_This text is italicized_
+[Visit GitHub!](www.github.com)
+
+_This text is italicized_ 
 **This is bold text**
 
 ## Description 
