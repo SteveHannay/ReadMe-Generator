@@ -16,6 +16,10 @@ _This text is italicized_
     * Contributing 
     * Tests 
     * Questions
+    * 
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
    
    
 ## Installation 
