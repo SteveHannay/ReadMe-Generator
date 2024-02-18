@@ -5,23 +5,25 @@ function generateMarkdown(data) {
 
   return `# TITLE
 
-  _This text is italicized_
+_This text is italicized_
+**This is bold text**
 
-  **This is bold text**
-
-  * Description 
-  * Table of Contents 
-  * Installation 
-  * Usage 
-  * License 
-  * Contributing 
-  * Tests 
-  * Questions
-  * 
-  * 
- 
-
-    <div>test test line</div>
+## Description 
+## Table of Contents 
+    * Installation 
+    * Usage 
+    * License 
+    * Contributing 
+    * Tests 
+    * Questions
+   
+   
+## Installation 
+## Usage 
+## License 
+## Contributing 
+## Tests 
+## Questions
 
   `;
 }
