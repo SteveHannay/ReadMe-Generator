@@ -2,6 +2,8 @@
 
 [Sample Link](www.github.com)
 ![Sample Image](https://octodex.github.com/images/bannekat.png).
+[Installation](#installation)
+
 
 _This text is italicized_ 
 **This is bold text**
