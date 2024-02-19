@@ -8,8 +8,8 @@ const questions = [
 
     {
         type: 'input',
-        name: 'name',
-        message: 'What is your name?',
+        name: 'title',
+        message: 'What is your title of your project?',
     },
     {
         type: 'list',

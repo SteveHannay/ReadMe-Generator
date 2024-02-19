@@ -1,8 +1,6 @@
-# TITLE
+# aaa
 
 [Sample Link](www.github.com)
-![Sample Image](https://octodex.github.com/images/bannekat.png).
-[Installation](#installation)
 
 
 _This text is italicized_ 
@@ -14,9 +12,9 @@ _This text is italicized_
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* Contributing 
-* Tests 
-* Questions
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
    
 ## Installation 
