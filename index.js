@@ -5,7 +5,7 @@ const generateMarkdown = require("./utils/generateMarkdown")
 
 
 
-// array of questions for user
+// array of questions for user to answer
 const questions = [
 
     {
@@ -17,6 +17,26 @@ const questions = [
         type: 'input',
         message: 'What is the Project Description?',
         name: 'description',
+    },
+    {
+        type: 'input',
+        message: 'What are the Installation instructions?',
+        name: 'installation',
+    },
+    {
+        type: 'input',
+        message: 'What is the Usage?',
+        name: 'usage',
+    },
+    {
+        type: 'input',
+        message: 'What are the Contribution guidelines?',
+        name: 'contributing',
+    },
+    {
+        type: 'input',
+        message: 'What are the Test instructions?',
+        name: 'tests',
     },
     {
         type: 'list',
@@ -63,11 +83,12 @@ function init() {
 
             console.log("")
             console.log("MARKDOWN : ")
-            console.log("")
+            console.log("----------------------------------------------------------------------------------")
             console.log(markdown)
+            console.log("----------------------------------------------------------------------------------")
 
             // Write File
-            const filename = `Output/README.md`
+            const filename = `Output/README.md`  // README file will be created in the OUTPUT Folder
         
             fs.writeFile(filename, markdown, (err) =>
                 err ? console.log(err) : console.log('README.md has been created in the Output folder')  //log error or success to console

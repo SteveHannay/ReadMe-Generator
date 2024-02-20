@@ -20,23 +20,23 @@ ${data.description}
   * [Questions](#questions)
    
 ## Installation 
-xx
+${data.installation}
 
 ## Usage 
-xx
+${data.usage}
 
 ## License 
 This application requires the following license (if any) : ${data.license}
 
 ## Contributing 
-xx
+${data.contributing}
 
 ## Tests 
-xx
+${data.tests}
 
 ## Questions
-If you have any questions please contact 
-Email : ${data.emailAddress}     
+If you have any questions please contact me. 
+Email : ${data.emailAddress}  
 GitHub : ${gitHubProfile}
 
 ` 
