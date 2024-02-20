@@ -1,9 +1,9 @@
-# TTTTTT
+# My Project Name
 
-[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
 
 ## Description 
-DDDDDD
+My Project Description
 
 ## Table of Contents 
   * [Installation](#installation)
@@ -14,22 +14,22 @@ DDDDDD
   * [Questions](#questions)
    
 ## Installation 
-IIIIIIIII
+My Installation Instructions
 
 ## Usage 
-UUUUUUUU
+My Usage
 
 ## License 
-This application requires the following license (if any) : BSD 3-Clause License
+This application requires the following license (if any) : Boost Software License 1.0
 
 ## Contributing 
-CCCCCCCC
+My Contribution Guidlines
 
 ## Tests 
-TTTTTTTTT
+My Test Instructions
 
 ## Questions
 If you have any questions please contact me. 
-Email : EEEEEEE  
-GitHub : [GitHub Home Page](https://github.com/UUUU)
+Email : Hannay.Steve@Googlemail.com  
+GitHub : [My GitHub Home Page](https://github.com/StevenHannay)
 

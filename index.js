@@ -87,7 +87,7 @@ function init() {
             console.log(markdown)
             console.log("----------------------------------------------------------------------------------")
 
-            // Write File
+            // Write README File
             const filename = `Output/README.md`  // README file will be created in the OUTPUT Folder
         
             fs.writeFile(filename, markdown, (err) =>
@@ -138,7 +138,7 @@ function getGitHubProfile(answers) {
     let result = ""
 
     if (answers.gitHubUserName !== "") {
-        result = "[GitHub Home Page](https://github.com/" + answers.gitHubUserName + ")"
+        result = "[My GitHub Home Page](https://github.com/" + answers.gitHubUserName + ")"
     }
 
     return result
