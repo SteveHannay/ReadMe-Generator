@@ -3,9 +3,7 @@ const path = require('path')
 const inquirer = require("inquirer")
 const generateMarkdown = require("./utils/generateMarkdown")
 
-// const imgApache2_0License = ""
-// const imgApache2_0License = ""
-// const imgApache2_0License = ""
+
 
 // array of questions for user
 const questions = [
@@ -19,7 +17,6 @@ const questions = [
         type: 'input',
         message: 'What is the Project Description?',
         name: 'description',
-        choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
     },
     {
         type: 'list',
@@ -27,12 +24,23 @@ const questions = [
         name: 'license',
         choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'BSD 3-Clause License'], // sample selection
     },
+    {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'gitHubUserName',
+    },
+    {
+        type: 'input',
+        message: 'What is your Email address?',
+        name: 'emailAddress',
+    },
 
 ]
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+
+// function call to initialize program
+init()
+
 
 // function to initialize program
 function init() {
@@ -47,43 +55,41 @@ function init() {
             // Get an Image for the License 
             let licenseImage = getLicenseImage(answers)
 
-
-            // Get link to GitHub profile
-
-
+            // Get a link to the users GitHub profile home page
+            let gitHubProfile = getGitHubProfile(answers)
 
             // Generate Markdown
-            let markdown = generateMarkdown(answers, licenseImage)
+            let markdown = generateMarkdown(answers, licenseImage, gitHubProfile)
 
+            console.log("")
+            console.log("MARKDOWN : ")
+            console.log("")
             console.log(markdown)
 
             // Write File
-            //const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
             const filename = `Output/README.md`
         
-            //fs.writeFile(filename, JSON.stringify(markdown, null, '\t'), (err) =>
             fs.writeFile(filename, markdown, (err) =>
-                //log error or success to console
-                err ? console.log(err) : console.log('Success!')
+                err ? console.log(err) : console.log('README.md has been created in the Output folder')  //log error or success to console
             )
-          })
 
+          })
 
 }
 
 
-// function call to initialize program
-init()
 
 
 // Supporting Functions
+// --------------------
+
 
 // Get Licence Image 
 function getLicenseImage(answers) {
 
-    let result = ""
-
     // return an image for the selected license (note : this is a sample set of licenses and images)
+    let result = ""
+    
     switch(answers.license) {
 
         case "Apache 2.0 License" :
@@ -103,5 +109,19 @@ function getLicenseImage(answers) {
 
 }
 
+
+// Get GitHub Profile
+function getGitHubProfile(answers) {
+
+    // return a link to the users GitHub home page
+    let result = ""
+
+    if (answers.gitHubUserName !== "") {
+        result = "[GitHub Home Page](https://github.com/" + answers.gitHubUserName + ")"
+    }
+
+    return result
+
+}
 
 

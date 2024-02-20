@@ -1,13 +1,12 @@
 // function to generate markdown for README
-function generateMarkdown(data, licenseImage) {
-  console.log("licenseImage = " + licenseImage)
-  console.log(data)
+function generateMarkdown(data, licenseImage, gitHubProfile) {
 
+  // console.log("licenseImage = " + licenseImage)  <-- uncomment to debug
+
+  // build markdown
   return `# ${data.title}
 
 ${licenseImage}
-
-[Sample Link](www.github.com)
 
 ## Description 
 ${data.description}
@@ -36,10 +35,14 @@ xx
 xx
 
 ## Questions
-xx
+If you have any questions please contact 
+Email : ${data.emailAddress}     
+GitHub : ${gitHubProfile}
 
 ` 
 
 }
 
+
+// export the generateMarkdown function for use by other modules
 module.exports = generateMarkdown;
