@@ -3,25 +3,29 @@ const path = require('path')
 const inquirer = require("inquirer")
 const generateMarkdown = require("./utils/generateMarkdown")
 
+// const imgApache2_0License = ""
+// const imgApache2_0License = ""
+// const imgApache2_0License = ""
+
 // array of questions for user
 const questions = [
 
     {
         type: 'input',
         name: 'title',
-        message: 'What is your title of your project?',
+        message: 'What is your Title of your project?',
     },
     {
-        type: 'list',
-        message: 'What languages do you know?',
-        name: 'stack',
+        type: 'input',
+        message: 'What is the Project Description?',
+        name: 'description',
         choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
     },
     {
         type: 'list',
-        message: 'What is your preferred method of communication?',
-        name: 'contact',
-        choices: ['email', 'phone', 'telekinesis'],
+        message: 'What License is required?',
+        name: 'license',
+        choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'BSD 3-Clause License'],
     },
 
 ]
@@ -40,8 +44,11 @@ function init() {
         // With the Answers
         .then((answers) => {
 
+            // Get Licence Image
+            let licenseImage = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+
             // Generate Markdown
-            let markdown = generateMarkdown(answers)
+            let markdown = generateMarkdown(answers, licenseImage)
 
             console.log(markdown)
 

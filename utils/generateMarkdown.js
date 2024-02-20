@@ -1,7 +1,7 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data, licenseImage) {
+  console.log("licenseImage = " + licenseImage)
   console.log(data)
-  //return `# ${data.title}
 
   return `# ${data.title}
 
@@ -12,6 +12,7 @@ _This text is italicized_
 **This is bold text**
 
 ## Description 
+${data.description}
 
 ## Table of Contents 
 * [Installation](#installation)
@@ -25,11 +26,19 @@ _This text is italicized_
 ## Installation 
 ## Usage 
 ## License 
+${licenseImage}
+
+
 ## Contributing 
 ## Tests 
 ## Questions
 
-  `;
+  ` + 
+   `TEST 2
+  
+
+  `  
+
 }
 
 module.exports = generateMarkdown;
