@@ -25,7 +25,7 @@ const questions = [
         type: 'list',
         message: 'What License is required?',
         name: 'license',
-        choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'BSD 3-Clause License'],
+        choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'BSD 3-Clause License'], // sample selection
     },
 
 ]
@@ -44,8 +44,13 @@ function init() {
         // With the Answers
         .then((answers) => {
 
-            // Get Licence Image
-            let licenseImage = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+            // Get an Image for the License 
+            let licenseImage = getLicenseImage(answers)
+
+
+            // Get link to GitHub profile
+
+
 
             // Generate Markdown
             let markdown = generateMarkdown(answers, licenseImage)
@@ -66,5 +71,37 @@ function init() {
 
 }
 
+
 // function call to initialize program
 init()
+
+
+// Supporting Functions
+
+// Get Licence Image 
+function getLicenseImage(answers) {
+
+    let result = ""
+
+    // return an image for the selected license (note : this is a sample set of licenses and images)
+    switch(answers.license) {
+
+        case "Apache 2.0 License" :
+            result = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+            break
+
+        case "Boost Software License 1.0" :
+            result = "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+            break
+
+        case "BSD 3-Clause License" :
+            result = "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+            break
+    }
+
+    return result
+
+}
+
+
+

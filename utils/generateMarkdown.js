@@ -5,39 +5,40 @@ function generateMarkdown(data, licenseImage) {
 
   return `# ${data.title}
 
+${licenseImage}
+
 [Sample Link](www.github.com)
-
-
-_This text is italicized_ 
-**This is bold text**
 
 ## Description 
 ${data.description}
 
 ## Table of Contents 
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
-
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
    
 ## Installation 
-## Usage 
-## License 
-${licenseImage}
+xx
 
+## Usage 
+xx
+
+## License 
+This application requires the following license (if any) : ${data.license}
 
 ## Contributing 
+xx
+
 ## Tests 
+xx
+
 ## Questions
+xx
 
-  ` + 
-   `TEST 2
-  
-
-  `  
+` 
 
 }
 
